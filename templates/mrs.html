@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}MRS Page{% endblock %}
+{% block contentTitle %}Movie Recommendation System{% endblock %}
+{% block content %}
+    <form action="/mrs" class="form" autocomplete="off" spellcheck="false" method="POST">
+        
+        <div class="form-group w-50 mx-auto" style="margin-top: 100px;">
+            <p style="font-size: large;">Please Enter Your Favorite Film.</p>
+            <p style="font-size: large;">Example: Forrest Gump</p>
+            <input type="text" class="form-control" autofocus="autofocus" id="filmname" name="filmname" placeholder="Enter Your Film Here...">
+        </div>
+        <div>
+             {{ film_ratings | safe }}
+        </div>
+    </form>
+{% endblock %}
